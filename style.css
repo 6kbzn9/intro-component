@@ -29,7 +29,6 @@ body {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   width: clamp(300px, 95%, 1120px);
   margin: 0 auto;
 }
@@ -37,6 +36,7 @@ body {
 header {
   padding-right: 3rem;
   color: #fff;
+  align-self: center;
 }
 
 .title {
@@ -54,7 +54,7 @@ header {
   background-color: var(--blue);
   text-align: center;
   border-radius: 10px;
-  padding: 1.15rem 0;
+  padding: 1.15rem 2rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 6px rgba(0, 0, 0, 0.2);
 }
@@ -81,17 +81,18 @@ input {
   border-radius: 4px;
   outline: none;
   /* font-size: 1.1rem; */
+  color: var(--dark-blue);
   font-weight: 600;
   padding: 1.1rem 2rem;
   caret-color: var(--blue);
   border: 1px solid var(--grayish-blue);
   font-family: inherit;
 }
-input:focus {
+.input:focus {
   border-color: var(--blue);
 }
-input::placeholder {
-  color: var(--dark-blue);
+.input::placeholder {
+  color: hsl(249, 10%, 45%);
 }
 
 .submit {
@@ -100,7 +101,7 @@ input::placeholder {
   text-transform: uppercase;
   font-size: 0.9rem;
   border: none;
-  padding: 1rem 2rem;
+  padding: 1rem;
   letter-spacing: 2px;
   box-shadow: 0 4px hsl(154, 59%, 45%);
   cursor: pointer;
@@ -142,3 +143,73 @@ img {
 }
 
 /* mobile layout */
+
+@media (max-width: 950px) {
+  .container {
+    grid-template-areas: "header header" "form form";
+    width: clamp(250px, 93%, 800px);
+    margin: 6rem auto;
+  }
+
+  header {
+    text-align: center;
+    grid-area: header;
+    padding-right: 0;
+    margin-bottom: 4rem;
+    width: 100%;
+  }
+  .title {
+    font-size: 2.75rem;
+  }
+  .form-container {
+    grid-area: form;
+    width: 100%;
+  }
+}
+@media (max-width: 490px) {
+  .title {
+    font-size: 2.25rem;
+  }
+  form {
+    padding: 2.5rem 1.5rem;
+  }
+  .form-title {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+  input,
+  .submit {
+    padding: 0.75rem 1.25rem;
+  }
+  .agreement span {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .title {
+    font-size: 2rem;
+  }
+  form {
+    padding: 2.5rem 1.25rem;
+  }
+  input {
+    padding: 0.75rem 1rem;
+  }
+  .submit {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  form {
+    padding: 2.5rem 1rem;
+  }
+
+  .agreement span {
+    display: inline;
+  }
+}
