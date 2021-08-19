@@ -155,7 +155,7 @@ input {
 
 /* mobile layout */
 
-@media (max-width: 950px) {
+@media (max-width: 970px) {
   .container {
     grid-template-areas: "header header" "form form";
     width: clamp(250px, 93%, 800px);
