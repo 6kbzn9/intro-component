@@ -127,6 +127,7 @@ input {
   top: 50%;
   transform: translateY(-50%);
   right: 1rem;
+  display: none;
 }
 .empty {
   position: absolute;
@@ -135,11 +136,21 @@ input {
   font-size: 0.65rem;
   font-style: italic;
   color: var(--red);
+  display: none;
 }
 
-.empty,
-img {
-  display: none;
+/* validation class */
+.invalid {
+  margin-bottom: 2.2rem;
+}
+.invalid .input {
+  border: 2px solid var(--red);
+  color: var(--red);
+}
+
+.invalid .empty,
+.invalid img {
+  display: inline-block;
 }
 
 /* mobile layout */
