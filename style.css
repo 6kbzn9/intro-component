@@ -127,7 +127,8 @@ input {
   top: 50%;
   transform: translateY(-50%);
   right: 1rem;
-  display: none;
+  pointer-events: none;
+  visibility: hidden;
 }
 .empty {
   position: absolute;
@@ -136,7 +137,8 @@ input {
   font-size: 0.65rem;
   font-style: italic;
   color: var(--red);
-  display: none;
+  pointer-events: none;
+  visibility: hidden;
 }
 
 /* validation class */
@@ -150,7 +152,7 @@ input {
 
 .invalid .empty,
 .invalid img {
-  display: inline-block;
+  visibility: visible;
 }
 
 /* mobile layout */
@@ -158,7 +160,7 @@ input {
 @media (max-width: 970px) {
   .container {
     grid-template-areas: "header header" "form form";
-    width: clamp(250px, 93%, 800px);
+    width: clamp(250px, 93%, 700px);
     margin: 6rem auto;
   }
 
@@ -177,7 +179,7 @@ input {
     width: 100%;
   }
 }
-@media (max-width: 490px) {
+@media (max-width: 500px) {
   .title {
     font-size: 2.25rem;
   }

@@ -37,9 +37,10 @@
           Try it free 7 days <span>then $20/mo. thereafter</span>
         </h3>
 
-        <form>
+        <form id="form">
           <div class="wrapper">
             <input
+              id="firstName"
               class="input"
               type="text"
               required
@@ -50,13 +51,20 @@
           </div>
 
           <div class="wrapper">
-            <input class="input" type="text" required placeholder="Last Name" />
+            <input
+              class="input"
+              type="text"
+              required
+              placeholder="Last Name"
+              id="lastName"
+            />
             <img src="images/icon-error.svg" alt="error" />
             <p class="empty">Last Name cannot be empty</p>
           </div>
 
           <div class="wrapper">
             <input
+              id="email"
               class="input"
               type="email"
               required
@@ -68,6 +76,7 @@
 
           <div class="wrapper">
             <input
+              id="password"
               class="input"
               type="password"
               required
@@ -87,7 +96,5 @@
         </form>
       </div>
     </div>
-
-    <script src="app.js"></script>
   </body>
 </html>
