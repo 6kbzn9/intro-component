@@ -1,0 +1,144 @@
+/* colors */
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(images/bg-intro-desktop.png) var(--red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: clamp(300px, 95%, 1120px);
+  margin: 0 auto;
+}
+
+header {
+  padding-right: 3rem;
+  color: #fff;
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.form-container {
+}
+
+.form-title {
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--blue);
+  text-align: center;
+  border-radius: 10px;
+  padding: 1.15rem 0;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+}
+.form-title span {
+  font-weight: normal;
+  color: var(--grayish-blue);
+}
+
+form {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+
+input {
+  width: 100%;
+  border-radius: 4px;
+  outline: none;
+  /* font-size: 1.1rem; */
+  font-weight: 600;
+  padding: 1.1rem 2rem;
+  caret-color: var(--blue);
+  border: 1px solid var(--grayish-blue);
+  font-family: inherit;
+}
+input:focus {
+  border-color: var(--blue);
+}
+input::placeholder {
+  color: var(--dark-blue);
+}
+
+.submit {
+  background-color: var(--green);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  border: none;
+  padding: 1rem 2rem;
+  letter-spacing: 2px;
+  box-shadow: 0 4px hsl(154, 59%, 45%);
+  cursor: pointer;
+}
+.submit:hover {
+  background-color: hsl(154, 59%, 60%);
+}
+
+.agreement {
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--grayish-blue);
+  font-style: italic;
+}
+.agreement span {
+  color: var(--red);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.wrapper img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1rem;
+}
+.empty {
+  position: absolute;
+  right: 0;
+  bottom: -1.35rem;
+  font-size: 0.65rem;
+  font-style: italic;
+  color: var(--red);
+}
+
+.empty,
+img {
+  display: none;
+}
+
+/* mobile layout */
